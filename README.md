@@ -2,7 +2,7 @@
 ## 一、How to use?
 **Step1:**
 ```java 
-String url = ""http://gh-game.oss-cn-hangzhou.aliyuncs.com/1434794302961350.apk"";
+String url = "http://gh-game.oss-cn-hangzhou.aliyuncs.com/1434794302961350.apk";
 DownloadEntry entry = new DownloadEntry(url);
 entry.name = "x三国.apk";
 ```
