@@ -1,28 +1,30 @@
 package com.gh.ghdownload.core;
 
 
-import java.io.File;
-import java.util.ArrayList;
 import java.util.HashMap;
-import java.util.Map.Entry;
 import java.util.concurrent.ExecutorService;
 
 import android.annotation.SuppressLint;
 import android.os.Handler;
 import android.os.Message;
 import android.util.Log;
-import android.widget.Toast;
 
 import com.gh.ghdownload.DownloadConfig;
 import com.gh.ghdownload.core.ConnectThread.ConnectListener;
 import com.gh.ghdownload.core.DownloadThread.DownloadListener;
-import com.gh.ghdownload.entities.DownloadEntry;
-import com.gh.ghdownload.entities.DownloadEntry.DownloadStatus;
-import com.gh.ghdownload.utilities.Constants;
-import com.gh.ghdownload.utilities.FileUtils;
-import com.gh.ghdownload.utilities.Trace;
+import com.gh.ghdownload.entity.DownloadEntry;
+import com.gh.ghdownload.entity.DownloadEntry.DownloadStatus;
+import com.gh.ghdownload.utils.FileUtils;
+import com.gh.ghdownload.utils.Trace;
 
-
+/**
+ * 
+ * @author shuwoom
+ * @email 294299195@qq.com
+ * @date 2015-9-2
+ * @update 2015-9-2
+ * @des A download task which contains an download entry.
+ */
 @SuppressLint("UseSparseArrays")
 public class DownloadTask implements ConnectListener, DownloadListener{
 

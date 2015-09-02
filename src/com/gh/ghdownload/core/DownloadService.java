@@ -8,9 +8,7 @@ import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 import java.util.concurrent.LinkedBlockingQueue;
 
-import android.app.AlertDialog;
 import android.app.Service;
-import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Handler;
 import android.os.IBinder;
@@ -18,14 +16,21 @@ import android.os.Message;
 import android.widget.Toast;
 
 import com.gh.ghdownload.DownloadConfig;
-import com.gh.ghdownload.R;
 import com.gh.ghdownload.db.DBController;
-import com.gh.ghdownload.entities.DownloadEntry;
-import com.gh.ghdownload.entities.DownloadEntry.DownloadStatus;
+import com.gh.ghdownload.entity.DownloadEntry;
+import com.gh.ghdownload.entity.DownloadEntry.DownloadStatus;
 import com.gh.ghdownload.notify.DataChanger;
-import com.gh.ghdownload.utilities.Constants;
-import com.gh.ghdownload.utilities.Trace;
+import com.gh.ghdownload.utils.Constants;
+import com.gh.ghdownload.utils.Trace;
 
+/**
+ * 
+ * @author shuwoom
+ * @email 294299195@qq.com
+ * @date 2015-9-2
+ * @update 2015-9-2
+ * @des Service to manager download tasks.
+ */
 public class DownloadService extends Service{
 	public static final int NOTIFY_DOWNLOADING = 1;
     public static final int NOTIFY_UPDATING = 2;

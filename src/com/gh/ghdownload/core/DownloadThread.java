@@ -10,14 +10,20 @@ import java.io.RandomAccessFile;
 import java.net.HttpURLConnection;
 import java.net.URL;
 
-import android.util.Log;
-
 import com.gh.ghdownload.DownloadConfig;
-import com.gh.ghdownload.entities.DownloadEntry;
-import com.gh.ghdownload.entities.DownloadEntry.DownloadStatus;
-import com.gh.ghdownload.utilities.Constants;
-import com.gh.ghdownload.utilities.Trace;
+import com.gh.ghdownload.entity.DownloadEntry;
+import com.gh.ghdownload.entity.DownloadEntry.DownloadStatus;
+import com.gh.ghdownload.utils.Constants;
+import com.gh.ghdownload.utils.Trace;
 
+/**
+ * 
+ * @author shuwoom
+ * @email 294299195@qq.com
+ * @date 2015-9-2
+ * @update 2015-9-2
+ * @des Download thread.
+ */
 public class DownloadThread implements Runnable{
 	private String url;
 	private int index;

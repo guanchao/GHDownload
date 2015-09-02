@@ -15,15 +15,21 @@ import android.widget.TextView;
 
 import com.gh.ghdownload.DownloadManager;
 import com.gh.ghdownload.R;
-import com.gh.ghdownload.R.id;
-import com.gh.ghdownload.R.layout;
-import com.gh.ghdownload.entities.DownloadEntry;
-import com.gh.ghdownload.entities.DownloadEntry.DownloadStatus;
+import com.gh.ghdownload.entity.DownloadEntry;
+import com.gh.ghdownload.entity.DownloadEntry.DownloadStatus;
 import com.gh.ghdownload.notify.DataWatcher;
 
+/**
+ * 
+ * @author shuwoom
+ * @email 294299195@qq.com
+ * @date 2015-9-2
+ * @update 2015-9-2
+ * @des Test download list.
+ */
 public class ListActivity extends Activity implements OnClickListener{
 	
-	private ArrayList<DownloadEntry> downloadEntries = new ArrayList<>();
+	private ArrayList<DownloadEntry> downloadEntries = new ArrayList<DownloadEntry>();
 	
 	
 	private Button pauseAllBtn;

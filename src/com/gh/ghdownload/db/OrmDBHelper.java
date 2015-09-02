@@ -6,11 +6,19 @@ import android.content.Context;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteDatabase.CursorFactory;
 
-import com.gh.ghdownload.entities.DownloadEntry;
+import com.gh.ghdownload.entity.DownloadEntry;
 import com.j256.ormlite.android.apptools.OrmLiteSqliteOpenHelper;
 import com.j256.ormlite.support.ConnectionSource;
 import com.j256.ormlite.table.TableUtils;
 
+/**
+ * 
+ * @author shuwoom
+ * @email 294299195@qq.com
+ * @date 2015-9-2
+ * @update 2015-9-2
+ * @des OrmDBHelper
+ */
 public class OrmDBHelper extends OrmLiteSqliteOpenHelper{
 	
 	public static final String DB_NAME = "gh_downloader";

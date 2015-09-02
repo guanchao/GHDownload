@@ -6,25 +6,31 @@ import java.util.ArrayList;
 import android.content.Context;
 import android.database.sqlite.SQLiteDatabase;
 
-import com.gh.ghdownload.entities.DownloadEntry;
-import com.gh.ghdownload.utilities.Trace;
+import com.gh.ghdownload.entity.DownloadEntry;
+import com.gh.ghdownload.utils.Trace;
 import com.j256.ormlite.dao.Dao;
-
+/**
+ * 
+ * @author shuwoom
+ * @email 294299195@qq.com
+ * @date 2015-9-2
+ * @update 2015-9-2
+ * @des DBController
+ */
 public class DBController {
-    private static DBController instance;
-    private SQLiteDatabase mDB;
+    private static DBController mInstance;
     private OrmDBHelper mDBhelper;
 
     private DBController(Context context) {
         mDBhelper = new OrmDBHelper(context);
-        mDB = mDBhelper.getWritableDatabase();
+        mDBhelper.getWritableDatabase();
     }
 
     public static DBController getInstance(Context context) {
-        if (instance == null) {
-            instance = new DBController(context);
+        if (mInstance == null) {
+            mInstance = new DBController(context);
         }
-        return instance;
+        return mInstance;
     }
 
     public synchronized void newOrUpdate(DownloadEntry entry) {

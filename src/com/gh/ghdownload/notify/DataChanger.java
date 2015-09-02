@@ -8,8 +8,16 @@ import java.util.Observable;
 import android.content.Context;
 
 import com.gh.ghdownload.db.DBController;
-import com.gh.ghdownload.entities.DownloadEntry;
+import com.gh.ghdownload.entity.DownloadEntry;
 
+/**
+ * 
+ * @author shuwoom
+ * @email 294299195@qq.com
+ * @date 2015-9-2
+ * @update 2015-9-2
+ * @des Observable which notifies all the observers.
+ */
 public class DataChanger extends Observable{
 	private static DataChanger mInstance;
 	

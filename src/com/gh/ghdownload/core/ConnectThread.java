@@ -1,12 +1,19 @@
 package com.gh.ghdownload.core;
 
-import java.io.IOException;
 import java.net.HttpURLConnection;
 import java.net.URL;
 
-import com.gh.ghdownload.utilities.Constants;
-import com.gh.ghdownload.utilities.Trace;
+import com.gh.ghdownload.utils.Constants;
+import com.gh.ghdownload.utils.Trace;
 
+/**
+ * 
+ * @author shuwoom
+ * @email 294299195@qq.com
+ * @date 2015-9-2
+ * @update 2015-9-2
+ * @des Connecting network to get content length and whether is's supporting ranges operation.
+ */
 public class ConnectThread implements Runnable{
 	private final ConnectListener listener;
 	private final String url;

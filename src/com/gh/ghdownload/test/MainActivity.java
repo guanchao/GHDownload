@@ -6,20 +6,24 @@ import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import com.gh.ghdownload.DownloadManager;
 import com.gh.ghdownload.R;
-import com.gh.ghdownload.entities.DownloadEntry;
+import com.gh.ghdownload.entity.DownloadEntry;
 import com.gh.ghdownload.notify.DataWatcher;
-import com.gh.ghdownload.utilities.FileUtils;
-import com.gh.ghdownload.utilities.Trace;
 
+/**
+ * 
+ * @author shuwoom
+ * @email 294299195@qq.com
+ * @date 2015-9-2
+ * @update 2015-9-2
+ * @des Test one download task.
+ */
 public class MainActivity extends Activity implements OnClickListener{
 	
-	private DownloadEntry entry = new DownloadEntry();
-	private String url = "http://gh-game.oss-cn-hangzhou.aliyuncs.com/1434794302961350.apk";
-//	private String url = "http://dldir1.qq.com/foxmail/weixin42s60v3.sisx";
+	private final String url = "http://gh-game.oss-cn-hangzhou.aliyuncs.com/1434794302961350.apk";
+	private DownloadEntry entry = new DownloadEntry(url);
 	
 	private Button addBtn;
 	private Button cancelBtn;
@@ -34,7 +38,6 @@ public class MainActivity extends Activity implements OnClickListener{
 		public void onDataChanged(DownloadEntry data) {
 			entry = data;
 			showText.setText(entry.toString());
-//			Trace.d(entry.toString());
 		}
 	};
 
@@ -44,8 +47,6 @@ public class MainActivity extends Activity implements OnClickListener{
 		setContentView(R.layout.activity_main);
 		
 		entry.name = "x三国.apk";
-//		entry.name = "weixin42s60v3.sisx";
-		entry.url = url;
 		
 		showText = (TextView)findViewById(R.id.show_text);
 		addBtn = (Button)findViewById(R.id.add_btn);

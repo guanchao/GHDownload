@@ -3,16 +3,24 @@ package com.gh.ghdownload;
 
 
 
-import com.gh.ghdownload.core.DownloadService;
-import com.gh.ghdownload.entities.DownloadEntry;
-import com.gh.ghdownload.notify.DataChanger;
-import com.gh.ghdownload.notify.DataWatcher;
-import com.gh.ghdownload.utilities.Constants;
-import com.gh.ghdownload.utilities.Trace;
-
 import android.content.Context;
 import android.content.Intent;
 
+import com.gh.ghdownload.core.DownloadService;
+import com.gh.ghdownload.entity.DownloadEntry;
+import com.gh.ghdownload.notify.DataChanger;
+import com.gh.ghdownload.notify.DataWatcher;
+import com.gh.ghdownload.utils.Constants;
+import com.gh.ghdownload.utils.Trace;
+
+/**
+ * 
+ * @author shuwoom
+ * @email 294299195@qq.com
+ * @date 2015-9-2
+ * @update 2015-9-2
+ * @des DownloadManager
+ */
 public class DownloadManager {
 	
 	private static DownloadManager mInstance;
