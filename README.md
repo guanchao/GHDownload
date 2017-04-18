@@ -66,7 +66,7 @@ private int max_download_threads = 3;
 public static String DOWNLOAD_PATH = Environment.getExternalStorageDirectory() + File.separator +
     		"gh-download" + File.separator;
 ```
-##备注：
+## 备注：
 （1）该下载框架使用了ormlite框架
 
 （2）如果使用生成的ghdownloadv1.2.jar作为引用的jar包，注意要把ormlite的jar包也一起引用
